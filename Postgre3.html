@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 3</title>
+    <link rel="stylesheet" href="Postgre.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg">
+    <nav class="navbar navbar-expand-lg bg-opacity-75 sticky-top" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-1-square" viewBox="0 0 16 16">
+                    <path d="M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z" />
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                </svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-9-square" viewBox="0 0 16 16">
+                    <path
+                        d="M7.777 12.146c-1.593 0-2.425-.89-2.52-1.798h1.296c.1.357.539.72 1.248.72 1.36 0 1.88-1.353 1.834-3.023h-.076c-.235.627-.873 1.184-1.934 1.184-1.395 0-2.566-.961-2.566-2.666 0-1.711 1.242-2.731 2.87-2.731 1.512 0 2.971.867 2.971 4.014 0 2.836-1.02 4.3-3.123 4.3Zm.118-3.972c.808 0 1.535-.528 1.535-1.594s-.668-1.676-1.56-1.676c-.838 0-1.517.616-1.517 1.659 0 1.072.708 1.61 1.54 1.61Z" />
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                </svg> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="Wyohan.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"> Projects</a>
+                        <ul class="dropdown-menu bg-opacity-75" id="down">
+                            <li><a class="dropdown-item" href="Homegames.html">Games</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="homeweb.html">Themes</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Artikel.html">Artikel</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="callus.html"> Call us</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto col-md-3" role="search">
+                    <div class="input-group">
+                        <label class="input-group-text" for="Search"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg></label>
+                        <input class="form-control me-3" id="Search" placeholder="Search " aria-label="Search">
+                        <!-- <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg></button> -->
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="display-5 p-20"> Tentang <span class="badge"> Postgresql </span></h1>
+        <br>
+        <h5> Selamat datang kembali semuanya, Mari kita lanjutkan belajar PostgreSQL nya<span class="create"> SEMANGAT
+            </span>
+            &#128513;</h5> <br>
+        <h2 class="display-8 p-20">UNIONS</h2>
+        <p> UNIONS digunakan untuk menggabungkan tabel misalnya untuk mengetahui penjualan sales tiap bulannya.</p>
+        <img src="photo/Postgre/UNION TABLE.png" class="img-fluid" alt="" srcset=""> <br><br>
+        <p>Section Overview :</p>
+        <ul>
+            <li class="fw-bold">Timestamps & EXTRACK</li>
+            <p> Untuk menangani seperti Tanggal dan waktu. <br> Ada 4 tipe data yang merujuk tentang informasi tanggal
+                atau waktu
+                :</p>
+            <ul>
+                <li class="fw-bold">TIME</li>
+                <p> Tentang waktu seperti : Jam, menit, dan detik.</p>
+                <li class="fw-bold">DATE</li>
+                <p> Tipe data yang berisi tentang : Tanggal, Hari, Bulan, dan Tahun </p>
+                <li class="fw-bold">TIMESTAMP</li>
+                <p> Menampilkan Date dan Time</p>
+                <li class="fw-bold">TIMESTAMPTZ</li>
+                <p> Menampilkan informasi tanggal waktu dan zona waktu</p>
+            </ul>
+            <p>Beberapa fungsi dan operasi yang terkait tipe data spesifik: </p>
+            <ul>
+                <li class="fw-bold"> TIMEZONE</li>
+                <P> untuk mengetahui kita terkonfigurasi di server apa, Perintahnya : <span class="create"> SHOWTIMEZONE
+                    </span> </P>
+                <img src="photo/Postgre/TIMEZONE.png" class="img-fluid" alt="" srcset="">
+                <li class="fw-bold"> NOW</li>
+                <P> untuk melihat tanggal saat itu juga dan waktu, Perintahnya : <span class="create">SELECT NOW()
+                    </span>
+                </P>
+                <img src="photo/Postgre/NOW().png" class="img-fluid" alt="" srcset="">
+                <li class="fw-bold"> TIMEOFDAY</li>
+                <p> Sama seperi now, tetapi bedanya dia memberi tahu kalau hari ini hari apa dan bulan menggunakan
+                    string, lebih detail karna di beri tahu hari tsb. </p>
+                <img src="photo/Postgre/TIMEOFDAY.png" class="img-fluid" alt="" srcset="">
+                <li class="fw-bold">CURRENT_TIME</li>
+                <p>hanya menampilkan waktu saat ini dan zona waktu</p>
+                <img src="photo/Postgre/CURRENT_TIME.png" class="img-fluid" alt="" srcset="">
+                <li class="fw-bold">CURRENT_DATE</li>
+                <p>Menampilkan informasi tentang tahun, bulan, dan tanggal hari tsb. </p>
+                <img src="photo/Postgre/CURRENT_DATE.png" class="img-fluid" alt="" srcset="">
+            </ul>
+            <p> Extrack informasi menggunakan : </p>
+            <ul>
+                <li>EXTRACT()</li>
+                <p> Memungkinkan anda untuk mengekstrak : </p>
+                <ul>
+                    <li>YEAR</li>
+                    <li>MONTH</li>
+                    <li>DAY</li>
+                    <li>WEEK</li>
+                    <li>QUARTER</li>
+                    Seperti berikut perintahnya :
+                    <img src="photo/Postgre/EXTRACTT.png" class="img-fluid" alt="" srcset="">
+                </ul>
+                <li>AGE()</li>
+                <p>Untuk menghitung umur dari sebuah data.</p>
+                Seperti berikut perintahnya :
+                <img src="photo/Postgre/AGE.png" class="img-fluid" alt="" srcset="">
+                <li>TO_CHAR()</li>
+                <p>untuk convert tipe data ke text, kode text ada banyak silahkan kunjungi website resminya :</p>
+                <a href="https://www.postgresql.org/docs/current/functions-formatting.html"
+                    class="link-underline-secondary link-secondary">Daftar Formating ada DISINI KLIK LINK
+                    INI !!!
+                </a>
+                <p> Seperti berikut contohnya : </p>
+                <img src="photo/Postgre/TO_CHAR.png" class="img-fluid" alt="" srcset="">
+            </ul>
+            <br>
+            <li class="fw-bold"> Math Function</li>
+            Format math : <a href="https://www.postgresql.org/docs/9.5/functions-math.html"
+                class="link-underline-secondary link-secondary">KLIK disini!!!</a>
+            <p></p>
+            <li class="fw-bold"> String Function</li>
+            Digunakan untuk mengedit, menggabungkan dan mengubah teks
+            Format : <a href="https://www.postgresql.org/docs/9.1/functions-string.html"
+                class="link-underline-secondary link-secondary">KLIK LINK INI !!!</a>
+            <p>contoh : </p>
+            <img src="photo/Postgre/STRING.png" class="img-fluid" alt="" srcset="">
+            <li class="fw-bold"> Sub-Query</li>
+            <p>Membuat query lebih kompleks <br> Contoh : </p>
+            <img src="photo/Postgre/INN.png" class="img-fluid" alt="" srcset="">
+            <p> Memfilter nama dan menampilkan yang bernama arman dari sales1. <br> contoh lain :</p>
+            <img src="photo/Postgre/BETWEEN.png" class="img-fluid" alt="" srcset="">
+            <p> Between memfilter antara tahun 2000 sampai 2010. <br> Contoh Selanjutnya : </p>
+            <img src="photo/Postgre/2SELECT.png" class="img-fluid" alt="" srcset="">
+            <p> Memfilter dari kedua tabel, menampilkan nama yang penjualan nya lebih dari 49.000.000</p>
+            <li class="fw-bold"> Self-Join</li>
+            <p>Suatu tabel digabungkan dengan dirinya sendiri untuk membandingkan nilai dalam baris dan kolom di tabel
+                yang sama. </p>
+
+        </ul>
+        <h2 class="display-8 p-20">Conditional Expresisions and Operators</h2>
+        <p>Di bagian ini kita akan fokus pada kemampuan melakukan operasi, Seperti :</p>
+        <ul>
+            <li class="fw-bold">CASE </li>
+            <p>Case bisa digunakan jika kondisi terpenuhi seperti if statement, Berikut perintahnya :</p>
+            <img src="photo/Postgre/CASE.png" class="img-fluid" alt="" srcset="">
+            <p> Gambar diatas, saya memberikan reward untuk urutan login pertama kali di game yang baru di rilis,
+                dimana no urut 1 sampai 3 disebut Premium, 4 dan 5 plus, dan lainnya yaitu normal</p>
+            <li>COALESCE</li>
+            <p> Fungsi COALESCE menerima jumlah tak terbataas dalam argument, menggembalikan argument pertama yang
+                not null (tidak kosong), jika semua argument null maka fungsi COALESCE akan mengembalikan null. <br>
+                Contohnya : </p>
+            <img src="photo/Postgre/COALESCE.png" class="img-fluid" alt="" srcset="">
+            <p> pada table di atas terdapat item yang mendapat discount, tetapi tidak dengan item C. <br>
+                Mari kita lihat hasil Discount setiap item yang sudah di Total harga setelah Discount</p>
+            <img src="photo/Postgre/FINAL DISC.png" class="img-fluid" alt="" srcset="">
+            <p> Setelah melihat hasil discount tiap item, akan tetapi item C tidak dapat di jumlah total nya. <br>
+                Dengan perintah COALESCE tanpa mengubah isi table bisa memberikan solusi, Seperti berikut perintahnya :
+            </p>
+            <img src="photo/Postgre/COALESCEE.png" class="img-fluid" alt="" srcset="">
+            <p> Jadi di sini Sql akan memeriksa diskon dan apakah nilai nya not null maka akan mengembalikan nilai
+                tsb, apabila nilainya null maka saya memberinya nilai 0, di table item C price nya 100 dan discount nya
+                null maka akan di kurangi 0 jadi hasilnya tetap. <br> fungsi ini untuk berjaga- jaga jika kalian suatu
+                saat menemukan tabel yang nilai nya null </p>
+            <li>NULLIF</li>
+            <p>Fungsi NULLIF mengambil dua input dan mengembalikan null jika keduanya sama. jika keduanya berbeda contoh
+                10 dan 12 maka mengembalikan 10, Contoh : </p>
+            <img src="photo/Postgre/3.png" alt="" srcset="">
+            <p> Perhatikan table di atas, mari kita hitung rasio nya dari kedua ruangan A dan B.</p>
+            <img src="photo/Postgre/NULLIF.png" alt="" srcset="">
+            <p> Pada gambar di atas saya akan menghitung berapa org yang ada di ruangan A dan B, dan menghitung berapa
+                rasio dari A dan B. <br> lalu ketika yang berada di ruangan B meninggalkan ruangan tsb, dan saya coba
+                menghitung kembali rasio nya. </p>
+            <img src="photo/Postgre/ERROR.png" alt="" srcset="">
+            <p> Muncul pesan error karna ruangan B yang sebelumnya sudah di hapus, dsini perintah NULLIF digunakan.</p>
+            <img src="photo/Postgre/NULLIF-SUM.png" alt="" srcset="">
+            <p> fungsi NULLIF akan mengembalikan null jika keduanya cocok, saya mengembalikan null jika hasil jumlahnya
+                0.</p>
+            <li>CAST</li>
+            <p> CAST untuk convert dari satu tipe data ke tipe data lain, misalnya anda bisa mengubah string ke integer.
+                <br> Seperti berikut perintahnya :
+            </p>
+            <img src="photo/Postgre/CAST.png" class="img-fluid" alt="" srcset="">
+            <p> Pada gambar di atas saya mengubah tipe data pada table barang kolom price dari integer menjadi varchar.
+            </p>
+            <li>VIEWS</li>
+            <p> Sering kali kita melihat data dan mengetik berulang" untuk memastikan data itu sesuai, VIEWS berguna
+                jika kita ingin menyimpan data yang sering kita lihat jadi kita tidak perlu mengetik berulang-ulang,
+                seperti memanggil nama table, Berikut perintah VIEW : </p>
+            <img src="photo/Postgre/VIEW.png" class="img-fluid" alt="" srcset="">
+            <p> Pada gambar di atas saya membuat View data_kelas yang menampilkan nama dari table kelas dan nama_ortu
+                dari table ortu,
+                dan nantinya ketika ingin menampilkan keduanya tidak perlu INNERJOIN lagi tetapi tinggal memanggil View
+                yang sudah di buat yaitu SELECT * FROM data_kelas, jika ingin menghapus view menggunakan drop view.
+            </p>
+            <li>Import and Export Functionality</li>
+            <p> Import untuk memindahkan data table misalnya dari excel ke postgresql seperti berikut : </p>
+            <img src="photo/Postgre/Import.png" class="img-fluid" alt="" srcset="">
+            <p> disini saya membuat isi data di excel dengan format file csv lalu membuat table Simple yang isinya
+                kosong hanya berupa kolom a, b, dan c di Pgadmin, lalu saya memindahkan data yang ada di file csv ke
+                table simple, refresh ketika sudah membuat table Simple lalu klik kanan pada table Simple lalu klik
+                Import/Export lalu klik folder yang sudah di buat (yg excel) lalu pilih csv lalu klik ok, lalu silahkan
+                lihat isi dari table Simple akan berisi data dari file yang sudah di import </p>
+            <p> Sedangkan Export digunakan untuk save file PostgreSQL ke format csv lalu file yg tdinya di Postgre bisa
+                di buka di Excel. </p>
+        </ul>
+
+    </div>
+    <nav class="fot fw-bold" id="fot">
+        <p> Connect With Yohan &#128516;</p>
+        <p><a href="https://www.instagram.com/yohann19/" class="link-underline link-underline-opacity-0"> Yohann19
+                <svg xmlns="http://www.w3.org/2000/svg" style="float:left;"
+                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </a></p>
+        </svg>
+        <p> <a href="https://wa.me/6285772994807" class="link-underline link-underline-opacity-0"> 085772994807
+                <svg xmlns="http://www.w3.org/2000/svg" style="float:left;"
+                    viewBox=" 0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                </svg>
+    </nav>
+
+
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
